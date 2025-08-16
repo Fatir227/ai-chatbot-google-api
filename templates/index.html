@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gemini AI Chatbot - Your Smart AI Companion</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="background-animation">
+        <div class="floating-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <header class="chat-header">
+            <div class="header-content">
+                <div class="logo-section">
+                    <div class="logo-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="logo-text">
+                        <h1>Gemini AI</h1>
+                        <p>Your Intelligent AI Companion</p>
+                    </div>
+                </div>
+                <div class="status-indicator">
+                    <div class="status-dot"></div>
+                    <span>Online</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="welcome-section">
+            <div class="welcome-card">
+                <div class="welcome-icon">
+                    <i class="fas fa-sparkles"></i>
+                </div>
+                <h2>Welcome to Gemini AI!</h2>
+                <p>I'm here to help you with anything you need. Let's start a conversation!</p>
+                <div class="quick-tips">
+                    <div class="tip">
+                        <i class="fas fa-lightbulb"></i>
+                        <span>Ask me anything!</span>
+                    </div>
+                    <div class="tip">
+                        <i class="fas fa-clock"></i>
+                        <span id="current-timestamp"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="chat-container">
+            <div id="chat" class="chat-messages">
+                <!-- Chat messages will appear here -->
+            </div>
+            
+            <div class="chat-input-section">
+                <form id="chat-form" class="chat-form">
+                    <div class="input-wrapper">
+                        <input 
+                            type="text" 
+                            id="user-input" 
+                            class="chat-input" 
+                            autocomplete="off" 
+                            placeholder="Type your message here..." 
+                            required
+                        >
+                        <button type="submit" class="send-button">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </form>
+                <div class="input-hint">
+                    <i class="fas fa-info-circle"></i>
+                    Press Enter to send, Shift+Enter for new line
+                </div>
+            </div>
+        </div>
+
+        <footer class="chat-footer">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="#" class="footer-link">
+                        <i class="fas fa-shield-alt"></i>
+                        Privacy
+                    </a>
+                    <a href="#" class="footer-link">
+                        <i class="fas fa-question-circle"></i>
+                        Help
+                    </a>
+                    <a href="#" class="footer-link">
+                        <i class="fas fa-cog"></i>
+                        Settings
+                    </a>
+                </div>
+                <div class="version-info">
+                    Gemini AI v2.0
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
